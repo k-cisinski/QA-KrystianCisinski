@@ -15,6 +15,6 @@
 - User is redirected to the login page.
 
 **Actual Result:**
-- (fill this after running test)
+- User redirected to login page succesfully.
 
-**Status:** Pending
+**Status:** Passed
