@@ -21,7 +21,9 @@
 - Step 4: Form submits succesfully without errors.
 
 ## Actual Results:
-_Pending - to be filled after execution_
+- Step 2: Some optional fields highlighted in green, required fields highlighted in red.
+- Step 3: When invalid email is entered, the email field changes it's highlight from green to red, indicating invalid format.
+- Step 4: After filling all required fields correctly and clicking "Submit", the form is submitted succesfully and a summary of the entered data is displayed.
 
 ## Status:
-Pending
+Executed - Passed (form behaves as designed)

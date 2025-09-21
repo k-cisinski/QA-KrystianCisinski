@@ -21,7 +21,9 @@
 - Step 4: Form submits succesfully and entered data is displayed.
 
 ## Actual Results:
-_Pending - to be filled after execution_
+- Step 2: No validation messages are displayed for required fields; nothing happens.
+- Step 3: Email field highlighted in red; data not updated below.
+- Step 4: Entered data displayed below form.
 
 ## Status:
-Pending
+Executed - Failed (validation messages missing)
