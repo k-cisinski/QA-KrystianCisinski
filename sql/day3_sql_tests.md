@@ -30,10 +30,15 @@ SELECT * FROM sakila.actor WHERE first_name = 'PENELOPE';
 ```
 
 ## Actual Result:
-- _Pending - to be filled after execution_
+```text
+1	PENELOPE	GUINESS	2006-02-15 04:34:33
+54	PENELOPE	PINKETT	2006-02-15 04:34:33
+104	PENELOPE	CRONYN	2006-02-15 04:34:33
+120	PENELOPE	MONROE	2006-02-15 04:34:33
+```
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## SQL-TC-02: Verify which actors' first names begin with "K"
 **Query:**
@@ -57,10 +62,22 @@ SELECT actor_id, first_name, last_name FROM sakila.actor WHERE lower(first_name)
 ```
 
 ## Actual Result:
-- _Pending - to be filled after execution_
+```text
+12	KARL	BERRY
+21	KIRSTEN	PALTROW
+25	KEVIN	BLOOM
+43	KIRK	JOVOVICH
+69	KENNETH	PALTROW
+88	KENNETH	PESCI
+92	KIRSTEN	AKROYD
+94	KENNETH	TORN
+127	KEVIN	GARLAND
+145	KIM	ALLEN
+169	KENNETH	HOFFMAN
+```
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## SQL-TC-03: Verify actors count with last names ending with "y"
 **Query:**
@@ -74,10 +91,12 @@ SELECT COUNT(*) AS last_name_ends_with_y FROM sakila.actor WHERE LOWER(last_name
 ```
 
 ## Actual Result:
-- _Pending - to be filled after execution_
+```text
+17
+```
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## SQL-TC-04: Verify customer count
 **Query:**
@@ -91,10 +110,12 @@ SELECT COUNT(*) AS customer_count FROM sakila.customer;
 ```
 
 ## Actual Result:
-- _Pending - to be filled after execution_
+```text
+599
+```
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## SQL-TC-05: Verify unique store 1 customer count
 **Query:**
@@ -108,10 +129,12 @@ SELECT COUNT(DISTINCT customer_id) AS unique_store_1_customers FROM sakila.custo
 ```
 
 ## Actual Result:
-- _Pending - to be filled after execution_
+```text
+326
+```
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## SQL-TC-06: Verify films with 'action' in title (case-insensitive)
 **Query:**
@@ -128,10 +151,15 @@ SELECT film_id, title FROM sakila.film WHERE LOWER(title) LIKE '%action%';
 ```
 
 ## Actual Result:
-- _Pending - to be filled after execution_
+```text
+45	ATTRACTION NEWTON
+287	ENTRAPMENT SATISFACTION
+763	SATISFACTION CONFIDENTIAL
+881	TEMPLE ATTRACTION
+```
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## SQL-TC-07: Verify films count with 'dog' in description (case-insensitive)
 **Query:**
@@ -145,7 +173,9 @@ SELECT COUNT(*) AS films_with_dogs FROM sakila.film WHERE LOWER(description) LIK
 ```
 
 ## Actual Result:
-- _Pending - to be filled after execution_
+```text
+99
+```
 
 ## Status:
-- Pending
+- Executed - Passed
