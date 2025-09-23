@@ -18,10 +18,13 @@
 - No console errors appear in DevTools after clicking Search.
 
 ## Actual Results:
-_Pending - to fill after test execution_
+- User was successfully logged out and redirected to the Amazon page.
+- Session ended - user had to log in again to access account features.
+- No console errors observed in DevTools after clicking Logout.
+- Network request for logout returned HTTP 200.
 
 ## Status:
-- Pending
+Executed - Passed
 
 ## Jira Bug:
-_Pending - to fill after test execution_
+N/A - no issues observed

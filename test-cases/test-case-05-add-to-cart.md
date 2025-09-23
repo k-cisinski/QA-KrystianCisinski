@@ -18,10 +18,14 @@
 - No console errors appear in DevTools after clicking Search.
 
 ## Actual Results:
-_Pending - to fill after test execution_
+- Item was successfully added to the cart (confirmation banner shown).
+- Cart count increased by 1.
+- **Console tav in DevTools shows 3 third-party network errors (net::ERR_NAME_NOT_RESOLVED) from ad/tracking scripts.**
+- No errors related to Add to Cart functionality itself.
+- Network request `add-to-cart` returned HTTP 200.
 
 ## Status:
-- Pending
+Executed - Passed with Observations
 
 ## Jira Bug:
-_Pending - to fill after test execution_
+[SCRUM-1](https://kcisinski.atlassian.net/browse/SCRUM-1)

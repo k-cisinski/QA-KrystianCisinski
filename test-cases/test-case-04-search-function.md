@@ -19,10 +19,12 @@
 - No console errors appear in DevTools after clicking Search.
 
 ## Actual Results:
-_Pending - to fill after test execution_
+- Search results page displayed with multiple relevant results for "test".
+- No red errors found in Console tab of DevTools.
+- Network request `search?q-test` returned HTTP 200.
 
 ## Status:
-- Pending
+Executed - Passed
 
 ## Jira Bug:
-_Pending - to fill after test execution_
+N/A - no bug found during test execution.
