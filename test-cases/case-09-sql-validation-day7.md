@@ -49,7 +49,7 @@ limit 5;
 - Executed - Passed 
 
 ## Jira Bugs:
-- No Bugs detected.
+- No Bugs detected
 
 ---
 
@@ -92,7 +92,7 @@ order by total_ordered desc;
 - Executed - Passed 
 
 ## Jira Bugs:
-- No Bugs detected.
+- No Bugs detected
 
 ---
 
