@@ -1,7 +1,11 @@
 # Day 7 - SQL Validation (Average Product Price)
 
 **Query file:** `sql/day7_extra_queries.sql`
-(This file contains 2 queries: lowest stock products and total orders per product.)
+(This file contains 2 queries: lowest stock products and total orders per product.)  
+
+**Execution Date:** 28-09-2025  
+
+**Executed by:** Krystian Cisiński
 
 ---
 
@@ -34,14 +38,18 @@ limit 5;
 
 ## Actual Result:
 ```text
-Pending
+2	Mechanical Keyboard	5
+5	Laptop Dell XPS 13	5
+1	Wireless Mouse	9
+8	Standing Desk 120x60	9
+6	IPhone 14	14
 ```
 
 ## Status:
-- _Pending 
+- Executed - Passed 
 
 ## Jira Bugs:
-- _Pending
+- No Bugs detected.
 
 ---
 
@@ -70,11 +78,23 @@ order by total_ordered desc;
 
 ## Actual Result:
 ```text
-Pending
+9	Coffee Beans Brazil 1kg	20
+5	Laptop Dell XPS 13	3
+6	IPhone 14	3
+1	Wireless Mouse	2
+2	Mechanical Keyboard	1
+4	Notebook	0
+7	Office Chair Ergonomic	0
+8	Standing Desk 120x60	0
 ```
 
 ## Status:
-- _Pending 
+- Executed - Passed 
 
 ## Jira Bugs:
-- _Pending
+- No Bugs detected.
+
+---
+
+## Summary:
+Both queries executed successfully and returned expected results. SQL validation for day 7 completed.
