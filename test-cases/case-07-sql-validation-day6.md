@@ -46,13 +46,22 @@ order by remaining_stock desc;
 ```
 
 ## Actual Result:
-- _Pending - To be filled after execution
+```text
+4	Notebook	50	0	50
+9	Coffee Beans Brazil 1kg	50	20	30
+7	Office Chair Ergonomic	20	0	20
+6	IPhone 14	14	3	11
+8	Standing Desk 120x60	9	0	9
+1	Wireless Mouse	9	2	7
+2	Mechanical Keyboard	5	1	4
+5	Laptop Dell XPS 13	5	3	2
+```
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## Jira Bugs:
-- Pending
+- No bugs detected.
 
 ---
 
@@ -70,13 +79,13 @@ having total_ordered > p.stock_quantity;
 - No records were found for this query.
 
 ## Actual Result:
-- _Pending - To be filled after execution
+- No records were found for this query.
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## Jira Bugs:
-- Pending
+- No bugs detected.
 
 ---
 
@@ -92,13 +101,13 @@ where p.product_id is null;
 - No records were found for this query.
 
 ## Actual Result:
-- _Pending - To be filled after execution
+- No records were found for this query.
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## Jira Bugs:
-- Pending
+- No bugs detected.
 
 ---
 
@@ -112,10 +121,10 @@ select * from qa_test.orders where quantity <= 0;
 - The query returned only NULL values.
 
 ## Actual Result:
-- _Pending - To be filled after execution
+- The query returned only NULL values. 
 
 ## Status:
-- Pending
+- Executed - Passed
 
 ## Jira Bugs:
-- Pending
+- No bugs detected.
