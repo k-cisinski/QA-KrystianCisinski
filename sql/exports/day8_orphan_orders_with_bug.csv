@@ -1,0 +1,2 @@
+order_id,customer_name,product_id,quantity,order_date,created_at
+11,BUG_TEST_ORPHAN,9999,1,2025-10-05,"2025-10-05 19:14:39"

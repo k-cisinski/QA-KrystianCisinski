@@ -1,0 +1,9 @@
+product_id,product_name,stock_quantity,total_ordered,remaining_stock
+9,"Coffee Beans Brazil 1kg",50,51,-1
+5,"Laptop Dell XPS 13",5,3,2
+2,"Mechanical Keyboard",5,1,4
+1,"Wireless Mouse",9,2,7
+8,"Standing Desk 120x60",9,0,9
+6,"IPhone 14",14,3,11
+7,"Office Chair Ergonomic",20,0,20
+4,Notebook,50,0,50
