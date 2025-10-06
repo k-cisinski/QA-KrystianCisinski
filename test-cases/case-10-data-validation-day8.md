@@ -99,6 +99,11 @@ product_id,product_name,stock_quantity,total_ordered,remaining_stock
 ## Status:
 - Executed - Failed 
 
+## Post-fix Verification:
+- Re-tested after cleanup (2025-10-06)
+- No failing rows detected
+- Jira Status: Resolved / Fixed
+
 ## Jira Bugs:
 - SCRUM-2 - https://kcisinski.atlassian.net/browse/SCRUM-2 
 
@@ -149,6 +154,12 @@ order_id,customer_name,product_id,quantity,order_date,created_at
 ## Jira Bugs:
 - SCRUM-3 - https://kcisinski.atlassian.net/browse/SCRUM-3 
 
+## Post-fix Verification:
+- Re-tested after cleanup (2025-10-06)
+- No failing rows detected
+- Jira Status: Resolved / Fixed
+
+
 ---
 
 ## SQL-TC-03: Negative or zero quantities in orders
@@ -190,3 +201,8 @@ order_id,customer_name,product_id,quantity,order_date,created_at
 
 ## Jira Bugs:
 - SCRUM-4 - https://kcisinski.atlassian.net/browse/SCRUM-4 
+
+## Post-fix Verification:
+- Re-tested after cleanup (2025-10-06)
+- No failing rows detected
+- Jira Status: Resolved / Fixed
