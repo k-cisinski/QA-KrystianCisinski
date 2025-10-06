@@ -82,13 +82,25 @@ ORDER BY remaining_stock ASC;
 No results with `remaining_stock` below 0.
 
 ## Actual Result:
-- _Pending 
+```text
+MINGW64 ~/Documents/GitHub/Projects/QA-KrystianCisinski (day-8-bug-reporting)
+$ head -n 12 sql/exports/day8_total_ordered_vs_stock_with_bug.csv
+product_id,product_name,stock_quantity,total_ordered,remaining_stock
+9,"Coffee Beans Brazil 1kg",50,51,-1
+5,"Laptop Dell XPS 13",5,3,2
+2,"Mechanical Keyboard",5,1,4
+1,"Wireless Mouse",9,2,7
+8,"Standing Desk 120x60",9,0,9
+6,"IPhone 14",14,3,11
+7,"Office Chair Ergonomic",20,0,20
+4,Notebook,50,0,50
+``` 
 
 ## Status:
-- _Pending 
+- Executed - Failed 
 
 ## Jira Bugs:
-- _Pending 
+- SCRUM-2 - https://kcisinski.atlassian.net/browse/SCRUM-2 
 
 ---
 
@@ -124,13 +136,18 @@ WHERE
 No rows being returned - every order.product_id should exist in products.
 
 ## Actual Result:
-- _Pending 
+```text
+MINGW64 ~/Documents/GitHub/Projects/QA-KrystianCisinski (day-8-bug-reporting)
+$ head -n 12 sql/exports/day8_orphan_orders_with_bug.csv
+order_id,customer_name,product_id,quantity,order_date,created_at
+11,BUG_TEST_ORPHAN,9999,1,2025-10-05,"2025-10-05 19:14:39"
+``` 
 
 ## Status:
-- _Pending 
+- Executed - Failed 
 
 ## Jira Bugs:
-- _Pending 
+- SCRUM-3 - https://kcisinski.atlassian.net/browse/SCRUM-3 
 
 ---
 
@@ -160,10 +177,16 @@ WHERE
 No rows being returned - quantity must be > 0.
 
 ## Actual Result:
-- _Pending 
+```text
+MINGW64 ~/Documents/GitHub/Projects/QA-KrystianCisinski (day-8-bug-reporting)
+$ head -n 12 sql/exports/day8_negative_quantities_with_bug.csv
+order_id,customer_name,product_id,quantity,order_date,created_at
+8,BUG_TEST_ZERO_Q,1,0,2025-10-05,"2025-10-05 18:52:19"
+9,BUG_TEST_NEG_Q,2,-5,2025-10-05,"2025-10-05 18:52:19"
+``` 
 
 ## Status:
-- _Pending 
+- Executed - Failed
 
 ## Jira Bugs:
-- _Pending 
+- SCRUM-4 - https://kcisinski.atlassian.net/browse/SCRUM-4 
