@@ -1,0 +1,15 @@
+{
+	"id": "7e695179-dc08-42db-a589-b508e6aabe4d",
+	"name": "Local (Day9)",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-10-11T15:58:56.564Z",
+	"_postman_exported_using": "Postman/11.63.6"
+}

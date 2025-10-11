@@ -1,0 +1,219 @@
+{
+	"id": "09591db9-ece3-46be-b279-dbcb205dec7a",
+	"name": "Day 9 - Products CRUD",
+	"timestamp": "2025-10-11T15:55:11.510Z",
+	"collection_id": "48587973-b10667d4-a6e0-4bba-a0ba-6333915e0c58",
+	"folder_id": 0,
+	"environment_id": "48587973-7e695179-dc08-42db-a589-b508e6aabe4d",
+	"totalPass": 12,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-10-11T15:55:10.668Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "eb8f44d8-33d8-4a6f-a5a2-62fc78e69fe4",
+			"name": "Create product - POST /products",
+			"url": "http://localhost:3000/products",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status is 200 or 201": true,
+				"Response is JSON": true,
+				"Response is parsable JSON and contains id": true
+			},
+			"testPassFailCounts": {
+				"Status is 200 or 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is parsable JSON and contains id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status is 200 or 201": true,
+					"Response is JSON": true,
+					"Response is parsable JSON and contains id": true
+				}
+			]
+		},
+		{
+			"id": "400577bc-3d01-4306-b084-b81387799763",
+			"name": "GET /products (list)",
+			"url": "http://localhost:3000/products",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response is JSON array": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is JSON array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response is JSON array": true
+				}
+			]
+		},
+		{
+			"id": "e3b4d1f9-5fc5-4119-b9eb-1f5133a0c4fc",
+			"name": "PUT /products/{{productId}} (update)",
+			"url": "http://localhost:3000/products/11",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response contains updated title": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains updated title": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response contains updated title": true
+				}
+			]
+		},
+		{
+			"id": "69cd8469-dc16-4c9a-9550-d40e49007c3a",
+			"name": "GET single - GET /products/{{productId}}",
+			"url": "http://localhost:3000/products/11",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response is JSON": true,
+				"Response contains same id as environment productId": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains same id as environment productId": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response is JSON": true,
+					"Response contains same id as environment productId": true
+				}
+			]
+		},
+		{
+			"id": "2fc29621-f84f-4283-aa1e-52eda83207e8",
+			"name": "DELETE /products/{{productId}}",
+			"url": "http://localhost:3000/products/11",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Deleted resource check": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deleted resource check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Deleted resource check": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 25,
+	"collection": {
+		"requests": [
+			{
+				"id": "eb8f44d8-33d8-4a6f-a5a2-62fc78e69fe4",
+				"method": "POST"
+			},
+			{
+				"id": "400577bc-3d01-4306-b084-b81387799763",
+				"method": "GET"
+			},
+			{
+				"id": "e3b4d1f9-5fc5-4119-b9eb-1f5133a0c4fc",
+				"method": "PUT"
+			},
+			{
+				"id": "69cd8469-dc16-4c9a-9550-d40e49007c3a",
+				"method": "GET"
+			},
+			{
+				"id": "2fc29621-f84f-4283-aa1e-52eda83207e8",
+				"method": "DELETE"
+			}
+		]
+	}
+}
