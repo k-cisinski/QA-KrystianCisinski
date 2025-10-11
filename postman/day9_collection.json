@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "b10667d4-a6e0-4bba-a0ba-6333915e0c58",
+		"name": "Day 9 - Products CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48587973",
+		"_collection_link": "https://k-cisinski-5566912.postman.co/workspace/Krystian's-Workspace~2cbbc229-7eb7-4de2-886b-35f75214b7a3/collection/48587973-b10667d4-a6e0-4bba-a0ba-6333915e0c58?action=share&source=collection_link&creator=48587973"
+	},
+	"item": [
+		{
+			"name": "Create product - POST /products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200 or 201\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is JSON\", function() {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"let jsonData;\r",
+							"pm.test(\"Response is parsable JSON and contains id\", function() {\r",
+							"    pm.expect(function() {jsonData = pm.response.json(); }).not.to.throw();\r",
+							"    pm.expect(jsonData.id, \"id not found\").to.be.ok;\r",
+							"    pm.environment.set(\"productId\", jsonData.id);\r",
+							"    console.log(\"Saved productId\", jsonData.id);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"11\",\r\n    \"title\": \"QA Test Product\",\r\n    \"price\": 25.5,\r\n    \"description\": \"Created during Day 9 tests\",\r\n    \"category\": \"electronics\",\r\n    \"image\": \"https://i.pravatar.cc\",\r\n    \"rating\": {\r\n        \"rate\": 4.2,\r\n        \"count\": 37\r\n      }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/products",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /products (list)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => pm.response.to.have.status(200));\r",
+							"\r",
+							"pm.test(\"Response is JSON array\", () => {\r",
+							"    const json = pm.response.json();\r",
+							"    pm.expect(Array.isArray(json)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"QA Test Product\",\r\n    \"price\": 25.5,\r\n    \"image\": \"https://i.pravatar.cc\",\r\n    \"category\": \"electronics\"\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/products",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET single - GET /products/{{productId}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => pm.response.to.have.status(200));\r",
+							"pm.test(\"Response is JSON\", () => pm.response.to.be.json);\r",
+							"pm.test(\"Response contains same id as environment productId\", () => {\r",
+							"    const json = pm.response.json();\r",
+							"    pm.expect(json.id).to.eql(String(pm.environment.get(\"productId\")));\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"QA Test Product\",\r\n    \"price\": 25.5,\r\n    \"image\": \"https://i.pravatar.cc\",\r\n    \"category\": \"electronics\"\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/products/{{productId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /products/{{productId}} (update)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => pm.response.to.have.status(200));\r",
+							"\r",
+							"pm.test(\"Response contains updated title\", () => {\r",
+							"    const json = pm.response.json();\r",
+							"    pm.expect(json.title).to.eql(\"QA Test Product - Updated\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"QA Test Product - Updated\",\r\n  \"price\": 29.99,\r\n  \"description\": \"Updated during Day 9 tests\",\r\n  \"category\": \"electronics\",\r\n  \"image\": \"https://i.pravatar.cc\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/products/{{productId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /products/{{productId}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", () => pm.response.to.have.status(200));\r",
+							"\r",
+							"pm.test(\"Deleted resource check\", () => {\r",
+							"    const json = pm.response.json();\r",
+							"    // json returns deleted object - checking id existance\r",
+							"    pm.expect(json.id).to.eql(String(pm.environment.get(\"productId\")));\r",
+							"    // remove variable\r",
+							"    pm.environment.unset(\"productId\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"QA Test Product - Updated\",\r\n  \"price\": 29.99,\r\n  \"description\": \"Updated during Day 9 tests\",\r\n  \"category\": \"electronics\",\r\n  \"image\": \"https://i.pravatar.cc\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/products/{{productId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
